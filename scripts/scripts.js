@@ -62,11 +62,7 @@ export function addVideo(element, href) {
   });
 }
 
-/**
-RUG
-**/
 
-url.searchParams.append("ck", Math.random());
 
 
 /**
@@ -466,6 +462,13 @@ export async function useGraphQL(query, param) {
     data['aem-author'] = data['aem-author'].replace('author', data['hlx.page']);
   }
   data['aem-author'] = data['aem-author'].replace(/\/+$/, '');
+
+  /**
+RUG
+**/
+
+url.searchParams.append("ck", Math.random());
+  
   const { pathname } = new URL(query);
   const url = param ? new URL(`${data['aem-author']}${pathname}${param}`) : new URL(`${data['aem-author']}${pathname}`);
   const options = data['aem-author'].includes('publish')
