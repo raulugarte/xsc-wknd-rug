@@ -63,6 +63,13 @@ export function addVideo(element, href) {
 }
 
 /**
+RUG
+**/
+
+url.searchParams.append("ck", Math.random());
+
+
+/**
  * Convience method for creating tags in one line of code
  * @param {string} tag Tag to create
  * @param {object} attributes Key/value object of attributes
