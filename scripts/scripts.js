@@ -453,11 +453,21 @@ export async function useGraphQL(query, param) {
   }
   const { origin } = window.location;
 
+/** Start
+ * RUG: Don't use publish due to cache issues
+ */
+  
   if (origin.includes('.live')) {
     data['aem-author'] = data['aem-author'].replace('author', data['hlx.live']);
   } else if (origin.includes('.page')) {
     data['aem-author'] = data['aem-author'].replace('author', data['hlx.page']);
   }
+
+
+  /** End
+ * RUG: Don't use publish due to cache issues
+ */
+  
   data['aem-author'] = data['aem-author'].replace(/\/+$/, '');
   const { pathname } = new URL(query);
   const url = param ? new URL(`${data['aem-author']}${pathname}${param}`) : new URL(`${data['aem-author']}${pathname}`);
