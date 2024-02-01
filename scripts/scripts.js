@@ -457,12 +457,13 @@ export async function useGraphQL(query, param) {
  * RUG: Don't use publish due to cache issues
  */
   
+  /*
   if (origin.includes('.live')) {
     data['aem-author'] = data['aem-author'].replace('author', data['hlx.live']);
   } else if (origin.includes('.page')) {
     data['aem-author'] = data['aem-author'].replace('author', data['hlx.page']);
   }
-
+*/
 
   /** End
  * RUG: Don't use publish due to cache issues
